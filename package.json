@@ -1,6 +1,6 @@
 {
   "name": "organizationwebsite",
-  "homepage": "https://hemantsain2030.github.io/kvhr-website",
+  "homepage": "https://ayushdhingra02.github.io/website1",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -25,6 +25,7 @@
     "prettier-plugin-tailwindcss": "^0.3.0",
     "react": "^18.2.0",
     "react-apexcharts": "^1.4.0",
+    "react-app-rewired": "^2.2.1",
     "react-bootstrap": "^2.7.4",
     "react-chartjs-2": "^5.2.0",
     "react-confirm-alert": "^3.0.6",
@@ -32,17 +33,18 @@
     "react-icons": "^4.8.0",
     "react-pro-sidebar": "^1.1.0-alpha.1",
     "react-router-dom": "^6.11.2",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^5.0.1",
     "reactjs-popup": "^2.0.5",
     "recharts": "^2.6.2",
     "styled-components": "^5.3.11",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "publish": "gh-pages -d src",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": " react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
