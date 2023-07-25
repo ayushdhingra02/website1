@@ -1,7 +1,4 @@
 
-somehow fixed it too using react-app-rewired Make sure you install this package and create new file config-overrides.js in your root directory
-
-/* config-overrides.js */
 const webpack = require('webpack');
 module.exports = function override(config, env) {
     //do stuff with the webpack config...
