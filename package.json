@@ -58,9 +58,6 @@
       "not dead",
       "not op_mini all"
     ],
-    "browser": {
-    "crypto": false
-},
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
@@ -69,5 +66,8 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.2"
+  },
+  "browser": {
+    "crypto": false
   }
 }
