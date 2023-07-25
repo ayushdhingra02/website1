@@ -66,8 +66,5 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.3.2"
-  },
-  "browser": {
-    "crypto": false
   }
 }
