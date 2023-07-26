@@ -2,7 +2,7 @@ import React from 'react'
 import { Outlet } from 'react-router-dom';
 import AdminSidebar from './AdminSiderbar';
 var bcrypt = require('bcryptjs');
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 const sessionValue=async (email)=>{
 
   const encryptedPassword = await bcrypt.hash(email, 10);

@@ -2,7 +2,7 @@ import {useEffect, useState} from "react";
 import axios from "axios";
 import React from 'react';
 import { createSearchParams, useNavigate } from "react-router-dom";
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 const RecruiterEditJobs= ({ company, condition, type, details, onEdit, onDelete }) => {
 
   const [jobs, setJobs] = useState([]);

@@ -4,7 +4,7 @@ import ClientSidebar from './ClientSidebar';
 import { Outlet } from 'react-router-dom';
 // import { CImage } from '@coreui/react'
 
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 function ClientPage() {
     // const box = document.getElementById('sidebar');
     // console.log(box.clientWidth);

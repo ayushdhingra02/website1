@@ -13,7 +13,7 @@ import {useNavigate} from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css' // Import css
 
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 const AdminSidebar = () => {
 
     const navigate = useNavigate();

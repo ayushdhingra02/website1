@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import axios from "axios";
 import React from 'react';
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 const CandidateApplyJob= ({ company, condition, type, details, onEdit, onDelete }) => {
 
   const [jobs, setJobs] = useState([]);

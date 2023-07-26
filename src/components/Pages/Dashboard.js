@@ -30,7 +30,7 @@ import { Link, Outlet } from 'react-router-dom'
 // import RecruiterLogin from '../LoginForms/RecruiterLogin';
 // import ClientLogin from '../LoginForms/ClientLogin';
 // import CandidateLogin from '../LoginForms/CandidateLogin';
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 const drawerWidth = 200;
 var component2 = <ClientLogin/>
 var component = <JobCreation/>

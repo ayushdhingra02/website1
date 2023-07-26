@@ -13,7 +13,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { confirmAlert } from 'react-confirm-alert'; // Import
 import 'react-confirm-alert/src/react-confirm-alert.css' // Impo
 
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 const CandidateSidebar = () => {
     // const box = document.getElementById("sidebar");
     // console.log(box.clientWidth);

@@ -1,5 +1,5 @@
 import React from 'react'
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 const RecruiterRecruitmentStats = () => {
     return (
         <div className='Search'>

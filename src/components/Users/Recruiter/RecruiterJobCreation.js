@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import { Typography } from "@mui/material";
 import { LockOutlined } from "@mui/icons-material";
 import {Form, Button, Card} from 'react-bootstrap';
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 const RecruiterJobCreation = () => {
     const emailRef = useRef();
   const passwordRef = useRef();

@@ -10,7 +10,7 @@ import {
   CDBLink } from "cdbreact";
 import './AdminManageUsers.css'
 // import { Dashboard } from './Dashboard';
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 const RecruiterManageUsers= () => {
 
   const [sname,ssetName]= useState()

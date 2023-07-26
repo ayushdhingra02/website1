@@ -13,7 +13,7 @@ import {
   import 'react-confirm-alert/src/react-confirm-alert.css' 
   import { confirmAlert } from 'react-confirm-alert'; //
   let applicant=[]
-  const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+  const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
   const CleintApplicant= () => {
     
     const queryParameters = new URLSearchParams(window.location.search)

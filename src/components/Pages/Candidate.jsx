@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import Chart from "react-apexcharts";
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 function Candidate() {
   const [state, setState] = useState( {
     options: {

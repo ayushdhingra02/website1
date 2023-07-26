@@ -2,7 +2,7 @@ import {Form, Button, Card} from 'react-bootstrap';
 import React, {useRef,useState} from 'react';
 import axios from 'axios';
 // import { useAuth } from '../../context/AuthContext';
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 export default function HeadReg() {
   const emailRef = useRef();
   const passwordRef = useRef();

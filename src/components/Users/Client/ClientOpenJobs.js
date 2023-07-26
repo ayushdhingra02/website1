@@ -11,7 +11,7 @@ const ClientEditJobs= ({ company, condition, type, details, onEdit, onDelete }) 
         pathname:'/client/applicant', 
         search:`?${createSearchParams(params)}`})
 }
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
   useEffect(() => {
     axios.get(`${BaseUrl}/client/getJobs`, {params:{
       user:"client",unique_id:sessionStorage.getItem('userId')

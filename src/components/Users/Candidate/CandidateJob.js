@@ -5,7 +5,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css'
 import { confirmAlert } from 'react-confirm-alert'; //
 import { Height } from "@mui/icons-material";
 import { height } from "@mui/system";
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 const CandidateJob= ({ company, condition, type, details, onEdit, onDelete }) => {
 
   const [jobs, setJobs] = useState([]);

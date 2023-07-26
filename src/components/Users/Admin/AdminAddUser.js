@@ -2,7 +2,7 @@ import React , { useState , useEffect } from 'react'
 import { Link, Outlet } from 'react-router-dom'
 import './AdminJob.css'
 import axios from "axios";
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 const Dropdown = ({ options, onSelect }) => {
 
   

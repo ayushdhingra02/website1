@@ -18,7 +18,7 @@ import 'react-confirm-alert/src/react-confirm-alert.css'
 import { confirmAlert } from 'react-confirm-alert'; //
 import {useNavigate} from 'react-router-dom';
 import $ from "jquery"
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 
 function Copyright(props) {
   return (
