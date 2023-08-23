@@ -19,13 +19,13 @@ function Homepage() {
           <label>
             EnterLocation
           </label>
-        <input
-          type="text"
-          value={dynamicField}
-          onChange={handleDynamicFieldChange}
-          placeholder="Enter option 1 details"
+          <input
+            type="text"
+            value={dynamicField}
+            onChange={handleDynamicFieldChange}
+            placeholder="Enter option 1 details"
           />
-          </div>
+        </div>
       );
     } else if (selectedItem === 'option2') {
       // Render another type of field for option 2

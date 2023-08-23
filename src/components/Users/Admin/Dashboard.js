@@ -11,7 +11,7 @@ import { Pie, Bar } from "react-chartjs-2";
 // import Sidebar from "../Sidebar";
 // import Navbar from "../Navbar";
 import "./Dashboard.css";
-const BaseUrl= process.env.BaseUrl || "http://127.0.0.1:3000"
+const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
 export const Dashboard = () => {
 
   const data = {

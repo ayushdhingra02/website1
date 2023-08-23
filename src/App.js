@@ -21,7 +21,7 @@ import ResponsiveDrawer from './components/Pages/Dashboard';
 import HeafPage from './components/Pages/Admin'
 import ManagementPage from './components/Pages/Manager';
 // import RecruiterPage from './components/Pages/Recruiter';
-import Search from './components/Search';
+import Search, { Searchbar } from './components/Search';
 import List from './components/List';
 import JobCreation from './components/Pages/jobcreation';
 import Admin from './components/Pages/Admin';
@@ -59,6 +59,7 @@ import ClientJob from './components/Users/Client/ClientJob';
 
 import AdminAddUser from './components/Users/Admin/AdminAddUser';
 import AdminUser from './components/Users/Admin/AdminUser';
+import AdminStats from './components/Users/Admin/AdminStats';
 import ManagerAddUser from './components/Users/Manager/ManagerAddUser';
 import ManagerUser from './components/Users/Manager/ManagerUser';
 import CandidateApplyJob from './components/Users/Candidate/CandidateJob';
@@ -94,8 +95,9 @@ const App = ()=>{
           <Routes>
             <Route path='/about' element={<Information />}/>
             <Route path='/' element={<Homepage />}/>
-            <Route path='/admin' element={<AdminPage />}>
+            <Route path='/admin' element={< AdminPage />}>
               <Route path='applicant' element={<AdminApplicant />}/>
+              <Route path='stats' element={<AdminStats />}/>
               <Route path="jobs" element={<AdminJob />}>
                 <Route path="" element={<AdminEditJobs/>}/>
                 <Route path="addJob" element={<AdminJobCreation />} />

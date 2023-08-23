@@ -5,13 +5,13 @@ import NavBar from "./NavScroll";
 
 
 
-const Information = ()=>{
+const Information = () => {
     return (
         <>
-           <p>
-            This the information page
+            <p>
+                This the information page
             </p>
-           
+
         </>
     );
 };

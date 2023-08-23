@@ -1,12 +1,12 @@
 import {useEffect, useState} from "react";
-import axios from "axios";
 import Popup from 'reactjs-popup';
 import $ from 'jquery'; 
 import React from 'react';
 import './AdminEditJobs.css'
 import { createSearchParams, useNavigate } from "react-router-dom";
 
-const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
+import axios from "axios";
+const BaseUrl= process.env.BaseUrl ||  "https://kvhrr.onrender.com"
 
 const AdminEditJobs= () => {
 
@@ -15,6 +15,10 @@ const AdminEditJobs= () => {
   const [jobDescription,setJobDescription]= useState()
   const [jobType,setJobType]= useState()
   const [jobLocation,setJobLocation]= useState()
+  const [zone,setZone]= useState()
+  const [state,setState]= useState()
+  const [city,setCity]= useState()
+  const [pincode,setPincode]= useState()
   const [jobs, setJobs] = useState([]);
   // const [job, setJob] = useState();
   const [editId,setEditId] = useState(-1);
@@ -32,7 +36,11 @@ const AdminEditJobs= () => {
     // text=
     // console.log(text);
     setJobDescription(id.jobDescription);
-    setJobLocation(id.jobLocation);
+    // setJobLocation(id.jobLocation);
+    setZone(id.zone)
+    setCity(id.city)
+    setState(id.state)
+    setPincode(id.pincode)
     setJobType(id.jobType);
     setNumber(id.open_positions);
     
@@ -108,7 +116,12 @@ const AdminEditJobs= () => {
             <div id={c.unique_id} className="card-bg w-100 border d-flex flex-column p-4" style={{marginBottom:"20px"}}>
               <p><strong>Company Name:</strong><input id="company"style={{background:"lightgrey"}} type="text" value={companyName} onChange={e=>{setCompanyName(e.target.value)}}/></p>
               <p><strong>Job Description:</strong> <input style={{background:"lightgrey"}} type="text" value={jobDescription} onChange={e=>{setJobDescription(e.target.value)}}/></p>
-              <p><strong>Job Location:</strong> <input style={{background:"lightgrey"}} type="text" value={jobLocation} onChange={e=>setJobLocation(e.target.value)}/></p>
+              <p><strong>Job Location:</strong>
+               <input style={{background:"lightgrey"}} type="text" value={zone} onChange={e=>setZone(e.target.value)}/>
+              <input style={{background:"lightgrey"}} type="text" value={state} onChange={e=>setState(e.target.value)}/>
+              <input style={{background:"lightgrey"}} type="text" value={city} onChange={e=>setCity(e.target.value)}/>
+              <input style={{background:"lightgrey"}} type="text" value={pincode} onChange={e=>setPincode(e.target.value)}/>
+              </p>
               <p><strong>Job Type:</strong> <input style={{background:"lightgrey"}} type="text" value={jobType} onChange={e=>setJobType(e.target.value)}/></p>
               <p><strong>Recruited:</strong> {c.filled_positions}</p>
               <p><strong>Total positions:</strong> <input style={{background:"lightgrey"}} type="text" value={number} onChange={e=>setNumber(e.target.value)}/></p>
@@ -122,7 +135,7 @@ const AdminEditJobs= () => {
             <div id={c.unique_id} className="card-bg w-100 border d-flex flex-column p-4" style={{marginBottom:"20px"}}>
               <p><strong>Company Name:</strong> {c.companyName}</p>
               <p><strong>Job Description:</strong> {c.jobDescription}</p>
-              <p><strong>Job Location:</strong> {c.jobLocation}</p>
+              <p><strong>Job Location:</strong> <span >{c.city}</span><span> {c.state} </span><span> {c.pincode}</span></p>
               <p><strong>Job Type:</strong> {c.jobType}</p>
               <p><strong>Recruited:</strong> {c.filled_positions}</p>
               <p><strong>Total positions:</strong> {c.open_positions}</p>

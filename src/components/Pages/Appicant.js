@@ -15,12 +15,13 @@ import {
   import { confirmAlert } from 'react-confirm-alert'; //
   let applicant=[]
 const BaseUrl= process.env.BaseUrl || "https://kvhrr.onrender.com"
-  const Applicant= () => {
+const Applicant= () => {
     
+    console.log(BaseUrl)
     const queryParameters = new URLSearchParams(window.location.search)
     var job_id=queryParameters.get('1')
     var recruiter_id=queryParameters.get('2')
-    console.log(job_id,recruiter_id)
+    // console.log(job_id,recruiter_id)
     
 //   const handleItemChange = (e)=>{
 //     ssetSelectedOption(e.target.value)
@@ -157,9 +158,10 @@ const handleRecruit=(id)=>{
       axios.get(`${BaseUrl}/applicants`, {params:{
           user:"recruiter",unique_id:sessionStorage.getItem('userId'),job_id:job_id
         }}).then(res => {
-            console.log(res.data)
+            console.log(res.data.profiles[0])
             // setUsers(res.data)
-            applicant.push(res.data)
+            applicant.push(res.data.profiles)
+            applicant=res.data.profiles
         // console.log(applicant)
         
         // console.log("Hello",applicant)
@@ -173,23 +175,12 @@ return (
         <div className="dashboard d-flex">
         <div className="d-flex card-section">
         <div className="cards-container">
-        <div className='mb-2'>
-        <label style={{paddingRight:'5px'}} htmlFor="item">Search By User Type</label>
-                     <select style={{borderWidth:'1px', borderColor:'black'}} id="item"  > 
-                        <option value="All">All</option>
-                        <option value="Client">Client</option>
-                        <option value="Manager">Manager</option>
-                        <option value="Recruiter">Recruiter</option>
-                        <option value="Candidate">Candidate</option>
-                    </select>
-
-                    
-                    </div>
         <div className="card-bg w-100 border d-flex flex-column p-4" style={{height:"80vh",gridRow:"span 1",gridColumn:"span 3", overflowY:"scroll"}}>
-        {applicant===[]?applicant.map((c) => {
+        {applicant.length===0?applicant.map((c) => {
+            console.log("hii")
             return(
             <>
-            <div id={c.status} className="card-bg w-100 border d-flex flex-column p-4" style={{gridRow:"span 1",gridColumn:"span 3"}} >
+            <div  className="card-bg w-100 border d-flex flex-column p-4" style={{gridRow:"span 1",gridColumn:"span 3"}} >
               <p><strong>Name:</strong> {""} </p>
                <p><strong>Email ID:</strong> {c['0'].status}</p> 
               <p><strong>User ID:</strong> {c.unique_id}</p>

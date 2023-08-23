@@ -2,7 +2,7 @@
 
 	display:grid;
 	width:100%;
-	grid-template-columns:repeat(3, minmax(300px, 1fr));
+	grid-template-columns:repeat(3, minmax(300px, 2fr));
 	grid-gap:25px;
 	grid-template-rows:1fr;
 }
@@ -13,7 +13,7 @@
 }
 
 .dashboard .wide {
-	grid-column:span 2;
+	grid-column:span 3;
 }
 
 .dashboard .c-p {

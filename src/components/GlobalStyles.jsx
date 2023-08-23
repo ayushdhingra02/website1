@@ -14,14 +14,14 @@ html{
 }
 
 h1{
-    color: ${({theme})=> theme.colors.heading};
+    color: ${({ theme }) => theme.colors.heading};
     font-size: 6rem;
     font-weight: 900;
 
 }
 
 h2{
-    color: ${({theme})=> theme.colors.heading};
+    color: ${({ theme }) => theme.colors.heading};
     font-size: 4rem;
     font-weight: 300;
     white-space: normal;
@@ -35,7 +35,7 @@ h3{
 }
 
 p{
-    color: ${(theme)=> theme.colors.text};
+    color: ${(theme) => theme.colors.text};
     opacity: .7;
     font-size: 1.65rem;
     line-height: 1.5;

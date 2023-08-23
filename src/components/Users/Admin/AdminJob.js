@@ -7,8 +7,9 @@ const AdminJob = () => {
             <div >
 
             <div className="courses-nav">
-                <Link to="/admin/jobs/" >Get Jobs</Link>
-                <Link to="/admin/jobs/addJob">Add new Job</Link>
+                <Link to="/admin/jobs/" >Open Hirings</Link>
+                {/* <Link to="/admin/jobs/closedHirings" >Closed Hirings</Link> */}
+                <Link to="/admin/jobs/addJob">Create new Job</Link>
             </div>
             <div style={{height:'35%'}}>
 
